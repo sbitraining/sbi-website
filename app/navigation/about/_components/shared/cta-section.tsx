@@ -10,8 +10,9 @@ const Ctasection: React.FC<ElderlyCareHeroProps> = ({
   phoneNumber = "+977-9851403517",
   className = "",
 }) => {
-  const handleCallClick = () => {
-    window.location.href = `tel:${phoneNumber.replace(/\D/g, "")}`;
+  const handleWhatsAppClick = () => {
+    const cleanNumber = phoneNumber.replace(/\D/g, "");
+    window.open(`https://wa.me/${cleanNumber}`, "_blank");
   };
 
   return (
@@ -68,12 +69,12 @@ const Ctasection: React.FC<ElderlyCareHeroProps> = ({
 
         {/* Call to Action Button */}
         <button
-          onClick={handleCallClick}
+          onClick={handleWhatsAppClick}
           className="inline-flex items-center gap-3 bg-[#e7a98b] hover:bg-[#d0977a] text-white px-9 py-5 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-opacity-50"
           aria-label={`Call us at ${phoneNumber}`}
         >
           <Phone size={20} className="flex-shrink-0" />
-          Call Us {phoneNumber}
+          Chat on WhatsApp {phoneNumber}
         </button>
       </div>
     </section>
