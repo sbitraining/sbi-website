@@ -7,7 +7,7 @@ interface ElderlyCareHeroProps {
 }
 
 const Ctasection: React.FC<ElderlyCareHeroProps> = ({
-  phoneNumber = "+1 (800) 33 445",
+  phoneNumber = "+977-9851403517",
   className = "",
 }) => {
   const handleCallClick = () => {
