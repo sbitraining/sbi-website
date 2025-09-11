@@ -40,7 +40,7 @@ const MainImage = () => {
     <section className="relative w-full h-screen overflow-hidden -mt-[1px]">
       {/* Background Image */}
       <img
-        src={slide?.image || "/assets/images/elderly.jpg"} // first fallback if slide?.image is empty
+        src={slide?.image || "/assets/images/check.jpg"} // first fallback if slide?.image is empty
         alt={slide?.title ?? "Main Image"}
         className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
         crossOrigin="anonymous"
