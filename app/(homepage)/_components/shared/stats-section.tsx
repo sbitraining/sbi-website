@@ -110,20 +110,22 @@ const StatsSection: React.FC = () => {
               alt="Video Thumbnail"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center hover:bg-opacity-30 transition-all duration-300">
-              <button
+            {/* <div className="absolute inset-0 flex flex-col items-center justify-center hover:bg-opacity-30 transition-all duration-300"> */}
+
+            {/* <button
                 className="bg-[#e7a98b] hover:bg-[#e7a98b] p-6 rounded-full text-white shadow-2xl hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-orange-300 focus:ring-offset-2 focus:ring-offset-gray-800 mb-4"
                 aria-label="Play healthcare video"
                 onClick={() => setShowVideo(true)}
               >
                 <Play size={32} className="ml-1" />
-              </button>
-              {/* <div className="bg-black bg-opacity-70 px-6 py-2 rounded-full backdrop-blur-sm">
+              </button> */}
+
+            {/* <div className="bg-black bg-opacity-70 px-6 py-2 rounded-full backdrop-blur-sm">
                 <span className="text-white text-sm md:text-base font-medium">
                   Watch Our Video — How we care?
                 </span>
               </div> */}
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
