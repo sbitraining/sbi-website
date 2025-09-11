@@ -40,9 +40,13 @@ const MainImage = () => {
     <section className="relative w-full h-screen overflow-hidden -mt-[1px]">
       {/* Background Image */}
       <img
-        src={slide.image}
-        alt="Slide"
-        className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
+        src={slide?.image ?? ""}
+        alt={slide?.title ?? "Main Image"}
+        className="absolute inset-0 w-full h-full object-cover"
+        crossOrigin="anonymous"
+        onError={(e) =>
+          console.error("Image failed to load:", e.currentTarget.src)
+        }
       />
 
       {/* Left side black blur overlay */}
