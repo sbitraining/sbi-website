@@ -40,15 +40,15 @@ const MainImage = () => {
     <section className="relative w-full h-screen overflow-hidden -mt-[1px]">
       {/* Background Image */}
       <img
-        src={slide?.image ?? ""}
+        src={slide?.image || "/assets/images/haha.jpg"} // first fallback if slide?.image is empty
         alt={slide?.title ?? "Main Image"}
         className="absolute inset-0 w-full h-full object-cover"
         crossOrigin="anonymous"
-        onError={(e) =>
-          console.error("Image failed to load:", e.currentTarget.src)
-        }
+        onError={(e) => {
+          console.error("Image failed to load:", e.currentTarget.src);
+          e.currentTarget.src = "/assets/images/haha.jpg"; // fallback if loading fails
+        }}
       />
-
       {/* Left side black blur overlay */}
       <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-black/40 to-transparent z-10"></div>
 
