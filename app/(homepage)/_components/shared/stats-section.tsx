@@ -109,7 +109,12 @@ const StatsSection: React.FC = () => {
               src={videoSection?.thumbnail || "/assets/images/best.jpg"}
               alt="Video Thumbnail"
               className="w-full h-full object-cover"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src =
+                  "/assets/images/best.jpg";
+              }}
             />
+
             {/* <div className="absolute inset-0 flex flex-col items-center justify-center hover:bg-opacity-30 transition-all duration-300"> */}
 
             {/* <button
