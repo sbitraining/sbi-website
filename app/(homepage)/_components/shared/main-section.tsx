@@ -46,7 +46,7 @@ const MainImage = () => {
         crossOrigin="anonymous"
         onError={(e) => {
           console.error("Image failed to load:", e.currentTarget.src);
-          e.currentTarget.src = "/assets/images/elderly.jpg"; // fallback if loading fails
+          e.currentTarget.src = "/assets/images/check.jpg"; // fallback if loading fails
         }}
       />
       {/* Left side black blur overlay */}

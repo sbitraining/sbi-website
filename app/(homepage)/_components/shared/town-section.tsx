@@ -7,6 +7,7 @@ import axios from "axios";
 const Townsection = () => {
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
+  const [thumbnail, setThumbnail] = useState<string>("");
 
   useEffect(() => {
     axios
@@ -15,6 +16,7 @@ const Townsection = () => {
         if (res.data.length > 0) {
           setTitle(res.data[0].title);
           setDescription(res.data[0].description);
+          setThumbnail(res.data[0].thumbnail);
         }
       })
       .catch((err) => {
@@ -36,6 +38,14 @@ const Townsection = () => {
       <p className="text-gray-600 text-lg md:text-xl max-w-3xl leading-relaxed">
         {description}
       </p>
+
+      {thumbnail && (
+        <img
+          src={thumbnail}
+          alt={title}
+          className="rounded-2xl shadow-lg max-w-3xl w-full"
+        />
+      )}
     </section>
   );
 };
