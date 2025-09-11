@@ -106,7 +106,7 @@ const StatsSection: React.FC = () => {
         <div className="relative w-[320px] md:w-[480px] lg:w-[560px] shadow-2xl rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-500">
           <div className="relative aspect-video bg-gradient-to-br from-orange-200 to-orange-300">
             <img
-              src={videoSection?.thumbnail}
+              src={videoSection?.thumbnail || "/assets/images/best.jpg"}
               alt="Video Thumbnail"
               className="w-full h-full object-cover"
             />
