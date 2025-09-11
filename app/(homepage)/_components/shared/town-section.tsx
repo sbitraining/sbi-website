@@ -29,7 +29,7 @@ const Townsection = () => {
       <h1 className="font-extrabold text-4xl md:text-6xl leading-tight text-gray-900">
         {title}{" "}
         <span className="text-[#e7a98b] underline underline-offset-4 decoration-2">
-          in this town
+          guiding your success
         </span>
       </h1>
 
