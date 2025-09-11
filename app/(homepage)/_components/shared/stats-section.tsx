@@ -13,11 +13,11 @@ const StatsSection: React.FC = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   const stats: Stat[] = [
-    { number: "47+", label: "Years of Experience" },
-    { number: "25k", label: "Happy Families" },
-    { number: "128+", label: "Expert Nurses" },
-    { number: "69+", label: "Awards Winnings" },
-    { number: "37k", label: "Happy Seniors" },
+    { number: "5+", label: "Years of Experience" },
+    { number: "1k", label: "Happy Families" },
+    { number: "50+", label: "Expert Nurses" },
+    { number: "5+", label: "Awards Winnings" },
+    { number: "300+", label: "Happy Seniors" },
   ];
 
   const getNumericValue = (numberString: string): number => {
@@ -118,11 +118,11 @@ const StatsSection: React.FC = () => {
               >
                 <Play size={32} className="ml-1" />
               </button>
-              <div className="bg-black bg-opacity-70 px-6 py-2 rounded-full backdrop-blur-sm">
+              {/* <div className="bg-black bg-opacity-70 px-6 py-2 rounded-full backdrop-blur-sm">
                 <span className="text-white text-sm md:text-base font-medium">
                   Watch Our Video — How we care?
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -171,10 +171,12 @@ const StatsSection: React.FC = () => {
         </svg>
       </div>
       {/* Modal Video Player with Blur Background */}
+
+      {/*
       {showVideo && videoSection?.video && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center backdrop-blur-md bg-black/30">
           <div className="relative w-full max-w-4xl px-4">
-            {/* Exit Button */}
+            
             <button
               className="absolute -top-6 right-0 text-white hover:text-red-500 bg-[#e7a98b] bg-opacity-50 rounded-full p-2 shadow-lg"
               onClick={() => setShowVideo(false)}
@@ -183,7 +185,7 @@ const StatsSection: React.FC = () => {
               <X size={28} />
             </button>
 
-            {/* Video Player */}
+           
             <video
               controls
               autoPlay
@@ -194,7 +196,8 @@ const StatsSection: React.FC = () => {
             </video>
           </div>
         </div>
-      )}
+      )} 
+      */}
     </section>
   );
 };
