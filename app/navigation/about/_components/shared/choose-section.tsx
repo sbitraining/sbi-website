@@ -54,7 +54,7 @@ const Choosesection = () => {
             className="rounded-lg object-cover w-full h-auto max-h-[400px] sm:max-h-full"
           />
           <div className="absolute -bottom-8 left-4 sm:left-6 bg-[#e7a98b] text-white p-6 sm:p-12 shadow-lg text-center w-44 sm:w-56">
-            <h4 className="text-3xl sm:text-4xl font-extrabold">47+</h4>
+            <h4 className="text-3xl sm:text-4xl font-extrabold">5+</h4>
             <p className="text-xs sm:text-sm font-medium mt-1">
               Years of Experience
             </p>

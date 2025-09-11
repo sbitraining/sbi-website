@@ -7,10 +7,10 @@ const sharedBackText =
   "Thats Incredible! We are moved more than 4280 homes to another destination";
 
 const experience = [
-  { target: 47, suffix: "+", desc: "Years Of Experience" },
-  { target: 25000, suffix: "", desc: "Happy Families" },
-  { target: 69, suffix: "+", desc: "Awards Winning" },
-  { target: 128, suffix: "+", desc: "Expert Nurses" },
+  { target: 5, suffix: "+", desc: "Years Of Experience" },
+  { target: 1, suffix: "k", desc: "Happy Families" },
+  { target: 5, suffix: "+", desc: "Awards Winning" },
+  { target: 50, suffix: "+", desc: "Expert Nurses" },
 ];
 
 interface Slide {
