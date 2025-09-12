@@ -7,13 +7,13 @@ import axios from "axios";
 
 const care = [
   "Residential Caring",
-  "Health Care",
-  "Long term Care",
-  "Elderly Care",
-  "Intensive Care",
-  "Special Care",
-  "Intensive Care",
-  "Health Care",
+  "Caregiver Training",
+  "Career Counseling",
+  "Pre-Departure and Cultural Orientation",
+  "Job Placement Assistance",
+  "Test Preparation ",
+  "Certification:",
+  "Corporate and Customized Training",
 ];
 
 const sliderData = [
