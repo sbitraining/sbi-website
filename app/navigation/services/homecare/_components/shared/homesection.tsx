@@ -56,11 +56,12 @@ const Homesection = () => {
       {/*Text Content */}
       <div className="md:w-1/2 flex flex-col justify-center">
         <h2 className="text-4xl text-[#e7a98b] font-extrabold mb-4">
-          Home Care
+          Language Training Programs
         </h2>
         <p className="mb-4 text-gray-700">
-          Our home care services allow patients to recover and thrive in the
-          comfort of their homes with professional assistance.
+          We offer top-quality Japanese language training combined with
+          practical caregiving skills, guided by expert nurses to prepare
+          students for a successful caregiver career in Japan.
         </p>
 
         <h3 className="text-xl font-semibold mb-2 text-black">Key Features:</h3>
@@ -96,19 +97,19 @@ const Homesection = () => {
             onClick={() => router.push("/navigation/services/specialcare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Special Care
+            Job Placement Assistance
           </button>
           <button
             onClick={() => router.push("/navigation/services/healthcare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Health Care
+            Caregiver Training Programs
           </button>
           <button
             onClick={() => router.push("/navigation/services/residentalcare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Residental Care
+            Career Counseling and Guidance
           </button>
         </div>
 
