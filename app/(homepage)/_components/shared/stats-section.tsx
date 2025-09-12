@@ -104,7 +104,7 @@ const StatsSection: React.FC = () => {
       {/* Video Preview */}
       <div className="absolute top-[-90px] left-1/2 transform -translate-x-1/2 z-10 md:z-50 px-4 w-full flex justify-center">
         <div className="relative w-[320px] md:w-[480px] lg:w-[560px] shadow-2xl rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-500">
-          <div className="relative aspect-video bg-gradient-to-br from-orange-200 to-orange-300">
+          <div className="relative aspect-video bg-white flex items-center justify-center">
             <img
               src={videoSection?.thumbnail || "/assets/images/best.jpg"}
               alt="Video Thumbnail"
