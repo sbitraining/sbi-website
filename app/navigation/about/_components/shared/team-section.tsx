@@ -92,7 +92,7 @@ const OurTeam = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-48 lg:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   {/* Content Section */}
