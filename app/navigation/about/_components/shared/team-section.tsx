@@ -95,11 +95,12 @@ const OurTeam = () => {
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group flex-shrink-0 w-80 lg:w-96"
                 >
                   {/* Image Section */}
-                  <div className="relative overflow-hidden h-64 lg:h-80 bg-gray-100">
+                  {/* Image Section */}
+                  <div className="relative overflow-hidden h-64 lg:h-80 bg-gray-100 flex items-center justify-center">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   {/* Content Section */}
