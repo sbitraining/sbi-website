@@ -76,6 +76,13 @@ const OurTeam = () => {
       {/* Team Section*/}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Team Title */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Our Successful Team
+            </h2>
+          </div>
+
           {/* Manual Scroll for All Devices */}
           <div>
             <div
@@ -88,11 +95,11 @@ const OurTeam = () => {
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group flex-shrink-0 w-80 lg:w-96"
                 >
                   {/* Image Section */}
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden h-64 lg:h-80 bg-gray-100">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   {/* Content Section */}
