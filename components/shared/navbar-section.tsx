@@ -14,12 +14,7 @@ import {
   ChevronUp,
   Mail,
 } from "lucide-react";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaWhatsapp,
-  FaWhatsappSquare,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 interface NavItem {
   label: string;
@@ -44,19 +39,19 @@ const Navbar: React.FC = () => {
 
   const serviceItems = [
     {
-      label: "Home Care",
+      label: "Language Training Programs",
       href: "/navigation/services/homecare",
     },
     {
-      label: "Health Care",
+      label: "Caregiver Training Programs",
       href: "/navigation/services/healthcare",
     },
     {
-      label: "Residential Care",
+      label: "Career Counseling and Guidance",
       href: "/navigation/services/residentalcare",
     },
     {
-      label: "Special Care",
+      label: "Job Placement Assistance",
       href: "/navigation/services/specialcare",
     },
   ];

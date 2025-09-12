@@ -12,7 +12,7 @@ const care = [
   "Pre-Departure and Cultural Orientation",
   "Job Placement Assistance",
   "Test Preparation ",
-  "Certification:",
+  "Certification",
   "Corporate and Customized Training",
 ];
 
