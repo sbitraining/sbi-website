@@ -108,7 +108,7 @@ const StatsSection: React.FC = () => {
             <img
               src={videoSection?.thumbnail || "/assets/images/best.jpg"}
               alt="Video Thumbnail"
-              className="w-full h-auto object-contain"
+              className="max-w-full max-h-full object-contain"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src =
                   "/assets/images/best.jpg";
