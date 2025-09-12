@@ -23,7 +23,7 @@ const Homesection = () => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/services-category/`)
       .then((res) => res.json())
       .then((data: OurService[]) => {
-        const homecare = data.find((item) => item.service === "homecare");
+        const homecare = data.find((item) => item.service === "language");
         setServiceData(homecare || null);
       })
       .catch((error) => console.error("Error fetching Homecare data:", error));
