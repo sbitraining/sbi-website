@@ -23,8 +23,11 @@ const Homesection = () => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/services-category/`)
       .then((res) => res.json())
       .then((data: OurService[]) => {
-        const language = data.find((item) => item.service === "language");
-        setServiceData(language || null);
+        // Make sure we got an array
+        if (Array.isArray(data)) {
+          const language = data.find((item) => item.service === "language");
+          setServiceData(language || null);
+        }
       })
       .catch((error) => console.error("Error fetching language data:", error));
   }, []);
@@ -33,17 +36,15 @@ const Homesection = () => {
     <div className="flex flex-col md:flex-row gap-8 px-6 py-10 bg-white">
       {/* Image Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:w-1/2">
-        {serviceData &&
-        Array.isArray(serviceData.images) &&
-        serviceData.images.length > 0 ? (
-          serviceData.images.map((img, index) => (
+        {serviceData?.images?.length ? (
+          serviceData.images.map((img) => (
             <div
-              key={index}
+              key={img.id}
               className="relative w-full h-60 rounded-xl overflow-hidden shadow-md"
             >
               <img
                 src={img.image}
-                alt={`Service ${index + 1}`}
+                alt="Service"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -53,11 +54,12 @@ const Homesection = () => {
         )}
       </div>
 
-      {/*Text Content */}
+      {/* Text Content */}
       <div className="md:w-1/2 flex flex-col justify-center">
         <h2 className="text-4xl text-[#e7a98b] font-extrabold mb-4">
           Language Training Programs
         </h2>
+
         <p className="mb-4 text-gray-700">
           We offer top-quality Japanese language training combined with
           practical caregiving skills, guided by expert nurses to prepare
@@ -74,7 +76,7 @@ const Homesection = () => {
             })}
         </ul>
 
-        {/*Additional Services */}
+        {/* Additional Services */}
         <div className="mt-6">
           <div className="grid grid-cols-2 gap-x-6 gap-y-2">
             {[
@@ -91,7 +93,7 @@ const Homesection = () => {
           </div>
         </div>
 
-        {/*Buttons */}
+        {/* Buttons */}
         <div className="mt-6 flex flex-wrap gap-4">
           <button
             onClick={() => router.push("/navigation/services/specialcare")}
