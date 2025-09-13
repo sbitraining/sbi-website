@@ -9,7 +9,7 @@ const Specialcare = () => {
   const [loading, setLoading] = useState(true);
 
   const breadcrumbItems: { label: string; url?: string }[] = [
-    { label: "Special Care" },
+    { label: "Job Placement Assistance" },
   ];
 
   useEffect(() => {

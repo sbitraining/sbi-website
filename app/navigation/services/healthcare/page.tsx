@@ -9,7 +9,7 @@ const Healthcare = () => {
   const [loading, setLoading] = useState(true);
 
   const breadcrumbItems: { label: string; url?: string }[] = [
-    { label: "Health Care" },
+    { label: "Caregiver Training Programs" },
   ];
 
   useEffect(() => {
