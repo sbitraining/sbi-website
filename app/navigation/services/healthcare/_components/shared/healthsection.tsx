@@ -66,11 +66,13 @@ const Healthsection = () => {
       {/*Text Content */}
       <div className="md:w-1/2 flex flex-col justify-center">
         <h2 className="text-4xl text-[#e7a98b] font-extrabold mb-4">
-          Health Care
+          Caregiver Training Programs
         </h2>
         <p className="mb-4 text-gray-700">
-          Our health care services focus on both physical and mental well-being,
-          provided by skilled professionals.
+          Step into one of the most respected and in-demand professions
+          worldwide. Caregiver training program prepares you to deliver
+          compassionate care to the elderly, disabled, and those in need with
+          international standards and cultural sensitivity.
         </p>
 
         <h3 className="text-xl font-semibold mb-2 text-black">Key Features:</h3>
@@ -106,19 +108,19 @@ const Healthsection = () => {
             onClick={() => router.push("/navigation/services/homecare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Home Care
+            Language Training Programs
           </button>
           <button
             onClick={() => router.push("/navigation/services/residentialcare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Residential Care
+            Career Counseling and Guidance
           </button>
           <button
             onClick={() => router.push("/navigation/services/specialcare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Special Care
+            Job Placement Assistance
           </button>
         </div>
 
