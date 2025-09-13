@@ -22,20 +22,23 @@ const Specialsection = () => {
   const [serviceData, setServiceData] = useState<OurService | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/services-category/`
-        );
-        const data: OurService[] = res.data;
-        const specialcare = data.find((item) => item.service === "specialcare");
-        setServiceData(specialcare || null);
-      } catch (err) {
-        console.error("Error fetching specialcare data:", err);
-      }
-    };
+    fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/services-category/`)
+      .then((res) => res.json())
+      .then((data: OurService[]) => {
+        console.log("API response:", data);
 
-    fetchData();
+        const job = data.find(
+          (item) =>
+            item.service === "job" ||
+            item.service === "Job Placement Assistance"
+        );
+
+        console.log("Job Placement Assistance service found:", job);
+        setServiceData(job || null);
+      })
+      .catch((error) =>
+        console.error("Error fetching Job Placement Assistance data:", error)
+      );
   }, []);
 
   return (
@@ -65,11 +68,13 @@ const Specialsection = () => {
       {/*Text Content */}
       <div className="md:w-1/2 flex flex-col justify-center">
         <h2 className="text-4xl text-[#e7a98b] font-extrabold mb-4">
-          Special Care
+          Job Placement Assistance
         </h2>
         <p className="mb-4 text-gray-700">
-          Our special care services are designed for patients who need highly
-          personalized attention due to critical or chronic conditions.
+          We support students in finding caregiver jobs in Japan by connecting
+          them with trusted employers, guiding them through the application
+          process, and preparing them for interviews to ensure a smooth
+          placement abroad.
         </p>
 
         <h3 className="text-xl font-semibold mb-2 text-black">Key Features:</h3>
@@ -111,13 +116,13 @@ const Specialsection = () => {
             onClick={() => router.push("/navigation/services/homecare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Home Care
+            Language Training Programs
           </button>
           <button
             onClick={() => router.push("/navigation/services/healthcare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Health Care
+            Caregiver Training Programs
           </button>
         </div>
 

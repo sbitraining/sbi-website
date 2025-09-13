@@ -22,22 +22,26 @@ const Residentalsection = () => {
   const [serviceData, setServiceData] = useState<OurService | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/services-category/`
-        );
-        const data: OurService[] = res.data;
-        const residential = data.find(
-          (item) => item.service === "residentialcare"
-        );
-        setServiceData(residential || null);
-      } catch (err) {
-        console.error("Error fetching residentialcare data:", err);
-      }
-    };
+    fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/services-category/`)
+      .then((res) => res.json())
+      .then((data: OurService[]) => {
+        console.log("API response:", data);
 
-    fetchData();
+        const career = data.find(
+          (item) =>
+            item.service === "career" ||
+            item.service === "Career Counseling and Guidance"
+        );
+
+        console.log("Career Counseling and Guidance service found:", career);
+        setServiceData(career || null);
+      })
+      .catch((error) =>
+        console.error(
+          "Error fetching Career Counseling and Guidance data:",
+          error
+        )
+      );
   }, []);
 
   return (
@@ -70,8 +74,10 @@ const Residentalsection = () => {
           Career Counseling and Guidance
         </h2>
         <p className="mb-4 text-gray-700">
-          Residential care offers a homely environment with round-the-clock
-          supervision and support for those in need of long-term care.
+          We guide students aiming to work as caregivers in Japan. Our
+          counseling covers visa requirements, job opportunities, Japanese
+          language support, and interview preparation — helping you build a
+          clear path to a successful career abroad.
         </p>
 
         <h3 className="text-xl font-semibold mb-2 text-black">Key Features:</h3>
@@ -107,19 +113,19 @@ const Residentalsection = () => {
             onClick={() => router.push("/navigation/services/healthcare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Health Care
+            Caregiver Training Programs
           </button>
           <button
             onClick={() => router.push("/navigation/services/specialcare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Special Care
+            Job Placement Assistance
           </button>
           <button
             onClick={() => router.push("/navigation/services/homecare")}
             className="px-4 py-2 bg-[#e7a98b] text-white rounded-md"
           >
-            Home Care
+             Language Training Programs
           </button>
         </div>
 
