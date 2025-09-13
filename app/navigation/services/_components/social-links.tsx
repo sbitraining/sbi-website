@@ -19,7 +19,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
   const defaultLinks: SocialLink[] = [
     {
       name: "Facebook",
-      url: "https://facebook.com",
+      url: "https://www.facebook.com/profile.php?id=61578858687337",
       color: "hover:text-blue-600",
       icon: (
         <svg
@@ -33,7 +33,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
     },
     {
       name: "Instagram",
-      url: "https://instagram.com",
+      url: "https://www.facebook.com/profile.php?id=61578858687337",
       color: "hover:text-pink-600",
       icon: (
         <svg
@@ -47,7 +47,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
     },
     {
       name: "WhatsApp",
-      url: "https://whatsapp.com",
+      url: "https://www.facebook.com/profile.php?id=61578858687337",
       color: "hover:text-green-600",
       icon: (
         <svg
@@ -61,7 +61,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
     },
     {
       name: "Twitter",
-      url: "https://twitter.com",
+      url: "https://www.facebook.com/profile.php?id=61578858687337",
       color: "hover:text-blue-400",
       icon: (
         <svg
@@ -75,7 +75,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.facebook.com/profile.php?id=61578858687337",
       color: "hover:text-blue-700",
       icon: (
         <svg
