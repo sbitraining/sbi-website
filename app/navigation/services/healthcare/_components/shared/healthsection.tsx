@@ -20,23 +20,24 @@ interface OurService {
 const Healthsection = () => {
   const router = useRouter();
   const [serviceData, setServiceData] = useState<OurService | null>(null);
-
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/services-category/`
+    fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/services-category/`)
+      .then((res) => res.json())
+      .then((data: OurService[]) => {
+        console.log("API response:", data);
+
+        const caregiver = data.find(
+          (item) =>
+            item.service === "caregiver" ||
+            item.service === "Caregiver Training Programs"
         );
 
-        const data: OurService[] = res.data;
-        const healthcare = data.find((item) => item.service === "healthcare");
-        setServiceData(healthcare || null);
-      } catch (err) {
-        console.error("Error fetching healthcare data:", err);
-      }
-    };
-
-    fetchData();
+        console.log("Caregiver Training Programs service found:", caregiver);
+        setServiceData(caregiver || null);
+      })
+      .catch((error) =>
+        console.error("Error fetching Caregiver Training Programs data:", error)
+      );
   }, []);
 
   return (

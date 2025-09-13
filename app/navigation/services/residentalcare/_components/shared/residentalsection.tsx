@@ -67,7 +67,7 @@ const Residentalsection = () => {
       {/*Text Content */}
       <div className="md:w-1/2 flex flex-col justify-center">
         <h2 className="text-4xl text-[#e7a98b] font-extrabold mb-4">
-          Residential Care
+          Career Counseling and Guidance
         </h2>
         <p className="mb-4 text-gray-700">
           Residential care offers a homely environment with round-the-clock
