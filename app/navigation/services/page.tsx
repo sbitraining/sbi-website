@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import SocialLinks from "./_components/social-links";
 
 interface GalleryItem {
@@ -20,10 +19,11 @@ const Gallery: React.FC = () => {
   useEffect(() => {
     const fetchGallery = async () => {
       try {
-        const response = await axios.get(
-          "http://127.0.0.1:8001/api/service-gallery/"
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/service-gallery/`
         );
-        setGalleryItems(response.data);
+        const data = await response.json();
+        setGalleryItems(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Unknown error");
       } finally {
