@@ -23,13 +23,20 @@ const Homesection = () => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/services-category/`)
       .then((res) => res.json())
       .then((data: OurService[]) => {
-        // Make sure we got an array
-        if (Array.isArray(data)) {
-          const language = data.find((item) => item.service === "language");
-          setServiceData(language || null);
-        }
+        console.log("✅ API response:", data);
+
+        const language = data.find(
+          (item) =>
+            item.service === "language" ||
+            item.service === "Language Training Programs"
+        );
+
+        console.log("✅ Language service found:", language);
+        setServiceData(language || null);
       })
-      .catch((error) => console.error("Error fetching language data:", error));
+      .catch((error) =>
+        console.error("❌ Error fetching language data:", error)
+      );
   }, []);
 
   return (
