@@ -20,7 +20,7 @@ const Homesection = () => {
   const [serviceData, setServiceData] = useState<OurService | null>(null);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/services-category/`)
+    fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/services-category/`)
       .then((res) => res.json())
       .then((data: OurService[]) => {
         console.log("✅ API response:", data);
