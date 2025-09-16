@@ -142,9 +142,6 @@ const Contactsection = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center justify-center">
-                  <div className="text-6xl">🇯🇵</div>
-                </div>
               </div>
             </div>
           </div>
