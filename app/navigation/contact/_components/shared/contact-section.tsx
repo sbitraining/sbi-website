@@ -87,7 +87,7 @@ const Contactsection = () => {
             </div>
             <div>
               <h1 className="font-bold text-lg text-black">Phone</h1>
-              <p className="text-gray-600 text-md">9761058287, 9709196335</p>
+              <p className="text-gray-600 text-md">+977-9851403517</p>
             </div>
           </div>
 
@@ -146,7 +146,9 @@ const Contactsection = () => {
 
               <div className="flex flex-col md:flex-row gap-4 mb-4">
                 <div className="flex-1">
-                  <label className="block text-white mb-1">Interested Service</label>
+                  <label className="block text-white mb-1">
+                    Interested Service
+                  </label>
                   <input
                     type="text"
                     name="service"
@@ -212,6 +214,3 @@ const Contactsection = () => {
 };
 
 export default Contactsection;
-
-
-

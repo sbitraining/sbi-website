@@ -96,12 +96,12 @@ const Footer: React.FC = () => {
               <Phone className="w-6 h-6 text-[#e7a98b]" />
               <p>
                 <span className="text-gray-300">Phone Number:</span>{" "}
-                <span className="font-bold">9761058287, 9709196335</span>
+                <span className="font-bold">+977-9851403517</span>
               </p>
             </div>
           </div>
           <div className="text-center text-gray-400 text-sm mt-6">
-            © Copyright 2025, All Rights Reserved – Nepworld Tech Pvt Ltd
+            © Copyright 2025, All Rights Reserved – Sundar Dong
           </div>
         </div>
       </footer>

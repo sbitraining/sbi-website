@@ -130,7 +130,7 @@ const Navbar: React.FC = () => {
                           Phone number:
                         </p>
                         <p className="text-lg font-bold text-gray-800">
-                          9761058287, 9709196335
+                          +977-9851403517
                         </p>
                       </div>
                     </div>
