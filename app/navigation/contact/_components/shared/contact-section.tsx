@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Inbox, Phone, MapPin } from "lucide-react";
+import { Inbox, Phone, MapPin, Globe } from "lucide-react";
 
 const Contactsection = () => {
   // Update form state keys to match backend requirements
@@ -98,6 +98,54 @@ const Contactsection = () => {
             <div>
               <h1 className="font-bold text-lg text-black">Address</h1>
               <p className="text-gray-600 text-md">Basundhara, Kathmandu</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Japanese Company Details Section */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-red-600 to-red-700 p-6 rounded-lg shadow-lg">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-white p-2 rounded-md">
+                <Globe className="text-red-600 w-8 h-8" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">Japan Office</h2>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-md border border-white/20">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h3 className="text-white font-semibold text-lg mb-2">
+                    ABC株式会社
+                  </h3>
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2">
+                      <MapPin className="text-white w-4 h-4 mt-1 flex-shrink-0" />
+                      <p className="text-white/90 text-sm">
+                        福岡県久留米市六ツ門町7－24－1206
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Phone className="text-white w-4 h-4 flex-shrink-0" />
+                      <p className="text-white/90 text-sm">0942-48-2095</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Globe className="text-white w-4 h-4 flex-shrink-0" />
+                      <a
+                        href="http://www.theabc.jp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/90 text-sm hover:text-white transition-colors underline"
+                      >
+                        www.theabc.jp
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className="text-6xl">🇯🇵</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
